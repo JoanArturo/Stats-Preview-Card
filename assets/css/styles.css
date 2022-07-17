@@ -30,7 +30,7 @@ body {
 .card__header .card__image {
     background-image: url('/assets/img/image-header-mobile.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 290px;
     width: 100%;
     background-color: var(--soft-violet);
@@ -52,7 +52,7 @@ body {
 }
 .card__text {
     font-size: 1.2em;
-    line-height: 26px;
+    line-height: 28px;
     margin-bottom: 40px;
 }
 .card__text, .card__quantity-description {
@@ -62,14 +62,53 @@ body {
     display: grid;
     gap: 30px;
 }
-.group-text .card__quantity {
-    margin-bottom: 4px;
+.card__quantity {
+    margin-bottom: 6px;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 700;
 }
 .card__quantity-description {
-    font-size: 0.85em;
+    font-size: 1em;
     text-transform: uppercase;
+}
+.card__quantity, .card__quantity-description {
     letter-spacing: 1px;
+}
+
+/* -------------Desktop---------------- */
+@media screen and (min-width: 767px) {
+    body {
+        height: 100vh;
+    }
+    .card {
+        max-width: 900px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__header {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .card__body {
+        grid-column: 1;
+        padding: 50px;
+        text-align: unset;
+    }
+    .card__text {
+        font-size: 0.95em;
+        line-height: 24px;
+    }
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card__header .card__image {
+        background-size: cover;
+        height: 100%;
+    }
+    .card__quantity {
+        font-size: 1.3em
+    }
+    .card__quantity-description {
+        font-size: 0.75em;
+    }
 }
