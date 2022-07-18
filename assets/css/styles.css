@@ -28,7 +28,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .card__header .card__image {
-    background-image: url('/assets/img/image-header-mobile.jpg');
+    background-image: url('../../assets/img/image-header-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 290px;
